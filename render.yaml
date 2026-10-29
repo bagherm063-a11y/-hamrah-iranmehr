@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: iranmehr-fc
+    runtime: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: iranmehr-data
+      mountPath: /opt/render/project/src/server/data
+      sizeGB: 1

@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root { font-family: 'Vazirmatn', sans-serif; color: #172033; background: #f6f7fb; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { direction: rtl; scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #f6f7fb; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid rgba(225, 29, 72, .4); outline-offset: 2px; }
+::selection { background: #fecdd3; color: #881337; }
+.pitch-lines { background-image: linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px); background-size: 34px 34px; }
+.stadium-glow { background: radial-gradient(circle at 85% 10%, rgba(251, 191, 36, .3), transparent 25%), radial-gradient(circle at 7% 88%, rgba(244, 63, 94, .35), transparent 35%), linear-gradient(135deg, #101525, #591128 58%, #9f1239); }
+.match-center-hero { background: radial-gradient(circle at 50% 44%, rgba(225, 29, 72, .48), transparent 36%), linear-gradient(145deg, #080b14, #1c2438 52%, #540f28); }
+.live-card { background: linear-gradient(100deg, #9f1239, #e11d48 56%, #7f1d1d); box-shadow: 0 12px 28px rgba(159, 18, 57, .25); }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.animate-rise { animation: rise .45s ease-out both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
